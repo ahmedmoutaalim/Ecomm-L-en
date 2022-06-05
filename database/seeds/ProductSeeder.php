@@ -14,13 +14,13 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
                  
-            'name'=>'samsung',
+            'name'=>'sony',
             'price'=>'200',
-            'category' =>"mobile",
+            'category' =>"TV",
             'description' =>"lorem ipsum",
-            'gallery' =>"file:///C:/Users/Youcode/Downloads/001_Galaxy_A53_5G_black_front.jpg",
+            'gallery' =>"https://www.tradeinn.com/f/13819/138192974/sony-tv-kd43x81j-43-4k-led.jpg",
         
-        
+
         ]);
     }
 }
