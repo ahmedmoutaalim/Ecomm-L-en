@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-<div class="container custom-product" >
+<div class=" custom-product" >
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -14,11 +14,13 @@
   <div class="carousel-inner">
     @foreach ($prd as $item)
     <div class="item {{$item['id']==4?'active':''}}">
-     <img src="{{$item['gallery']}}" alt="Chania">
-     <div class="carousel-caption">
-       <h3>Los Angeles</h3>
-       <p>LA is always so much fun!</p>
+      <a href="detail/{{$item['id']}}">
+     <img class="slider-img" src="{{$item['gallery']}}" >
+     <div class="carousel-caption " style="background-color: #8080805c ">
+       <h3>{{$item['name']}}</h3>
+       <p>{{$item['description']}}</p>
      </div>
+    </a>
    </div>
     @endforeach
   </div>
@@ -33,7 +35,20 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<div class="trending-wrapper">
+    <h3>trending Products</h3>
+    @foreach ($prd as $item)
+    <div class="trending-item"> 
+      
+    <a href="detail/{{$item['id']}}">
+      <img class="trending-image" src="{{$item['gallery']}}" >
+     <div class="">
+       <h3>{{$item['name']}}</h3>
+     </div>
+    </a>
+   </div>
+    @endforeach
+</div>
 </div>
 @endsection
 
