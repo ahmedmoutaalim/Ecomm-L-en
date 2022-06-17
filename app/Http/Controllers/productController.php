@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Product;
+use App\cart;
 use Illuminate\Http\Request;
 
 use function GuzzleHttp\Promise\all;
@@ -27,4 +28,18 @@ class productController extends Controller
        return view('search' ,['prd'=>$data]) ;
     }
 
+    function addToCart(Request $req){
+        
+        if($req->session()->has('user')){
+           
+            $cart = new Cart ; 
+            $cart -> user_id = $req->session()->get('user')['id'];
+            $cart->product_id = $req-> product_id;
+            $cart->save();
+            return redirect('/');
+        }
+        else{
+           return redirect("login");
+        }
+    }
 }

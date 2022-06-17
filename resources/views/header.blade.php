@@ -15,7 +15,7 @@
       </form>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-cart"></span> Cart</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-cart"></span> Cart()</a></li>
       
     </ul>
   </div>

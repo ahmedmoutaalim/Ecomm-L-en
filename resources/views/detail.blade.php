@@ -14,7 +14,11 @@
         <h3>Description : {{$product["description"]}}</h3>
 
         <br><br>
+        <form action="/add-to-carte" method="POST">
+        @csrf
+        <input type="hidden" name="product_id" value={{$product['id']}}>
         <button class="btn btn-primary" >Add to carte</button>
+        </form>
         <br><br>   
         <button class="btn btn-success" >Buy now</button>
         <br><br>    
