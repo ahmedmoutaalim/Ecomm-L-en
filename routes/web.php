@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController ;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+
 use phpDocumentor\Reflection\DocBlock\Tags\See;
 
 /*
@@ -33,3 +34,4 @@ Route::get("/" , [productController::class,'index']);
 Route::get("detail/{id}" , [productController::class,'detail']);
 Route::get("search" , [productController::class,'search']);
 Route::post("add-to-carte" , [productController::class,'addToCart']);
+Route::get("CartList" , [productController::class,'CartList']);
