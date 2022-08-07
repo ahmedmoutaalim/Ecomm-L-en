@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 use App\Product;
 use App\cart;
-use Illuminate\Http\Request;
 
+use Illuminate\Contracts\Session\Session as SessionSession;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use function GuzzleHttp\Promise\all;
 
 class productController extends Controller
@@ -41,5 +43,11 @@ class productController extends Controller
         else{
            return redirect("login");
         }
+    }
+
+    static function cartItem(){
+
+        $userId = Session::get('user')['id'];
+        return Cart::where('user_id',$userId)->count();
     }
 }

@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController ;
 use App\Http\Controllers\productController;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\DocBlock\Tags\See;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +20,11 @@ use App\Http\Controllers\productController;
 
 Route::get('/login', function () {
     return view('Login');
+});
+
+Route::get('/logout', function () {
+    Session::forget('user');
+    return Redirect('login');
 });
 
 
