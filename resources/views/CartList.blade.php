@@ -6,6 +6,7 @@
 <div class="col-sm-10">
 <div class="trending-wrapper">
     <h2>result for Products </h2>
+    <a href="ordernew" class="btn btn-success" >Order new</a>
     @foreach ($products as $item)
     <div class="row searched-item cart-list"> 
     <div class="col-sm-3">
