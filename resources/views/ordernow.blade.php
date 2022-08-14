@@ -35,20 +35,20 @@
         </tbody>
       </table>
       <div>
-        <form>
+        <form action="/orderplace" method="POST">
+            @csrf
             <div class="form-group">
               <label class="form-label">tape your adress</label>
-              <textarea type="email" class="form-control"  placeholder="enter your email"></textarea>
+              <textarea name="adress" type="email" class="form-control"  placeholder="enter you address information"></textarea>
      
             </div>
             <div class="form-group">
+
               <label  class="form-label">Payment method</label>  <br><br>
-              <input type="radio" name="payment" ><span> Online payment</span> <br><br>
-              <input type="radio" name="payment" ><span>EMI payment  </span> <br><br>
-              <input type="radio" name="payment" ><span> payment on delivery</span>  <br><br>
+              <input type="radio" value="cash" name="payment" ><span> Online payment</span> <br><br>
+              <input type="radio" value="cash" name="payment"><span>EMI payment  </span> <br><br>
+              <input type="radio" value="cash" name="payment"><span> payment on delivery</span>  <br><br>
              
-         
-            
             </div>
             <button type="submit" class="btn btn-primary">Order now</button>
           </form>
