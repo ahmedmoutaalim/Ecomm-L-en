@@ -14,9 +14,9 @@ $total=ProductController::cartItem();
       <a class="navbar-brand" href="#">E-Comm-V1</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
      
-      <li><a href="#">Order</a></li>
+      <li><a href="/myorders">Order</a></li>
       <form class="navbar-form navbar-left" action="/search">
         <div class="form-group">
           <input type="text" name="query" class="form-control search-box" placeholder="Search" >
